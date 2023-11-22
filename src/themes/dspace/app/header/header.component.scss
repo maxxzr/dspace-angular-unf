@@ -2,11 +2,11 @@
   nav.navbar {
     display: none;
   }
-  .header {
-    background-color: var(--ds-header-bg);
-  }
 }
 
+.header {
+  background-color: var(--ds-header-bg);
+}
 .navbar-brand img {
   @media screen and (max-width: map-get($grid-breakpoints, md)) {
     height: var(--ds-header-logo-height-xs);

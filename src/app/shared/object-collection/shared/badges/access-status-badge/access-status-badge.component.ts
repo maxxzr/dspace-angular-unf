@@ -45,7 +45,7 @@ export class AccessStatusBadgeComponent {
   constructor(private accessStatusDataService: AccessStatusDataService) { }
 
   ngOnInit(): void {
-    this.showAccessStatus = environment.item.showAccessStatuses;
+    this.showAccessStatus = true;//environment.item.showAccessStatuses;
     if (this.object.type.toString() !== ITEM.value || !this.showAccessStatus || this.object == null) {
       // Do not show the badge if the feature is inactive or if the item is null.
       return;

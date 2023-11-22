@@ -5,7 +5,9 @@ nav.navbar {
     border-top: 1px var(--ds-header-navbar-border-top-color) solid;
   }
 }
-
+.navbar-inner-container{
+  background-color: #{$unf-primary-color};
+}
 .navbar-nav {
   background-color: var(--ds-navbar-bg);
 }

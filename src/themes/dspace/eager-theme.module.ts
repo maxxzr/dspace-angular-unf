@@ -9,6 +9,7 @@ import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
+import { HomePageModule } from '../../app/home-page/home-page.module';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -25,18 +26,19 @@ const DECLARATIONS = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    SharedBrowseByModule,
-    ResultsBackButtonModule,
-    RootModule,
-    NavbarModule,
-  ],
-  declarations: DECLARATIONS,
-  providers: [
-    ...ENTRY_COMPONENTS.map((component) => ({provide: component}))
-  ],
+    declarations: DECLARATIONS,
+    providers: [
+        ...ENTRY_COMPONENTS.map((component) => ({ provide: component }))
+    ],
+    imports: [
+        CommonModule,
+        SharedModule,
+        SharedBrowseByModule,
+        ResultsBackButtonModule,
+        RootModule,
+        NavbarModule,
+        HomePageModule
+    ]
 })
 /**
  * This module is included in the main bundle that gets downloaded at first page load. So it should

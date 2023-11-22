@@ -48,7 +48,7 @@
       <div class="row">
         <div *ngFor="let community of communities" class="col-3">
           <div class="card bg-dark text-white">
-            <img class="card-img-top" alt="{{ dsoNameService.getName(community) }}" src="https://repositorio.unf.edu.pe/themes/Mirage2/images/proyectos_investigacion.jpg" >
+            <img class="card-img-top" alt="{{ dsoNameService.getName(community) }}" src="/assets/images/communities/{{community.id}}.png" >
             <div class="card-body p-2 text-center">
               <h6 class="card-title m-0">
                 <a [routerLink]="['/communities', community.id]">{{ dsoNameService.getName(community) }}</a>
